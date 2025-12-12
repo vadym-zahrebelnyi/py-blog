@@ -9,14 +9,15 @@
         <a href="#" class="btn btn-primary">
           New Post +
         </a>
-        <form method="post" action="#">
+        <form method="post" action="{% url 'logout' %}">
+          {% csrf_token %}
           <input class="btn btn-danger" type="submit" value="Logout">
         </form>
       </div>
     </li>
   {% else %}
     <li class="list-group-item">
-      <a href="#">Login</a>
+      <a href="{% url 'login' %}">Login</a>
     </li>
   {% endif %}
   <li class="list-group-item">

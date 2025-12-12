@@ -51,5 +51,5 @@ class Commentary(models.Model):
     def __str__(self):
         return (
             f"{self.user.username}"
-            f" at {self.created_time.strftime("%d %b %Y, %H:%M")}"
+            f" at {self.created_time.strftime('%d %b %Y, %H:%M')}"
         )
